@@ -84,12 +84,14 @@ public class Player : MonoBehaviour
     // This method is called when the player kicks a Kickable item.
     public void IncreasePoints()
     {
+        _points++;
+        _pointsText.text = "points = " + _points;
         // Inside this method, increase the value of _points by one,
         // and update the _pointsText text with text displaying the new value of _points.
         
     }
     // STEP 10 -----------------------------------------------------------------
-
+    
     // ------------------------------------------------------------------------
     // Don't let the player jump again until they've touched the ground
     private void OnCollisionEnter2D(Collision2D collision)
